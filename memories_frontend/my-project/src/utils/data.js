@@ -144,12 +144,18 @@ export const categories = [
             }`;
     return query;
   };
+
+  export const validuserQuery = (userId) => {
+    const query = `*[_type == "validuser" && userId == '${userId}']`;
+    return query;
+  };
+
   
   export const userQuery = (userId) => {
     const query = `*[_type == "user" && _id == '${userId}']`;
     return query;
   };
-  
+
   export const userCreatedPinsQuery = (userId) => {
     const query = `*[ _type == 'pin' && userId == '${userId}'] | order(_createdAt desc){
       image{

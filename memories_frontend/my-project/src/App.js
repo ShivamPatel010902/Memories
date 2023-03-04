@@ -3,6 +3,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import Login from "./components/Login";
 import Home from './container/Home';
 import { useEffect } from 'react';
+import ValidUser from './components/ValidUser';
 
 export default function App() {
     const navigate= useNavigate();
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
             <Route path='login'  element={<Login/>} />
             <Route path='/*'  element={<Home/>} />
+            <Route path='validuser'  element={<ValidUser/>} />
         </Routes>
         </>
     )
